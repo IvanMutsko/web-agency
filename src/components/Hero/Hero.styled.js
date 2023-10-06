@@ -36,10 +36,10 @@ export const OrderBtn = styled.a`
 
   --body-color: #393937;
   --accent-color: #03e9f4;
-  --hover-color: #00b7bf;
+  --hover-color: #3c7a89;
   --white-color: #fff;
-  --box-shadow: 0 0 5px #00b7bf, 0 0 10px #00b7bf, 0 0 25px #00b7bf,
-    0 0 30px #00b7bf;
+  --box-shadow: 0 0 5px #3c7a89, 0 0 10px #3c7a89, 0 0 25px #3c7a89,
+    0 0 30px #3c7a89;
 
   position: relative;
   display: inline-block;

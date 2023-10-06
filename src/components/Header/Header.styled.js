@@ -28,6 +28,7 @@ export const BurgerBtn = styled.button`
     height: 50px;
     width: 50px;
     font-size: 40px;
+    cursor: pointer;
 
     transition: background-color 250ms linear;
 
