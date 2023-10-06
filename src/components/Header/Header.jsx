@@ -1,52 +1,53 @@
+import { useEffect, useState } from 'react';
+import { HiMenu } from 'react-icons/hi';
+
+import Navigation from '../Navigation/Navigation';
 import logo from '../../assets/logo.png';
 
 import {
   Section,
   LogoImage,
-  NavList,
-  NavItem,
-  NavigateLink,
+  BurgerMenu,
+  BurgerBtn,
+  Overlay,
 } from './Header.styled';
 
 const Header = () => {
-  const scrollToSection = id => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
+  const handleBurgerClick = () => {
+    setIsBurgerOpen(!isBurgerOpen);
   };
+
+  useEffect(() => {
+    document.body.classList.add('modal-open');
+
+    const pressEsc = evt => {
+      if (evt.code === 'Escape') {
+        setIsBurgerOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', pressEsc);
+
+    return () => {
+      window.removeEventListener('keydown', pressEsc);
+    };
+  }, []);
 
   return (
     <Section>
       <LogoImage src={logo} />
-      <nav>
-        <NavList>
-          <NavItem>
-            <NavigateLink
-              to="#services"
-              onClick={() => scrollToSection('services')}
-            >
-              Services
-            </NavigateLink>
-          </NavItem>
-          <NavItem>
-            <NavigateLink
-              to="#portfolio"
-              onClick={() => scrollToSection('portfolio')}
-            >
-              Portfolio
-            </NavigateLink>
-          </NavItem>
-          <NavItem>
-            <NavigateLink
-              to="#contact"
-              onClick={() => scrollToSection('contact')}
-            >
-              ContactUs
-            </NavigateLink>
-          </NavItem>
-        </NavList>
-      </nav>
+
+      <BurgerBtn onClick={handleBurgerClick}>
+        <HiMenu />
+      </BurgerBtn>
+
+      <BurgerMenu className={isBurgerOpen ? 'open' : ''}>
+        <Overlay>
+          <Navigation closeMenu={handleBurgerClick} />
+        </Overlay>
+      </BurgerMenu>
     </Section>
   );
 };
