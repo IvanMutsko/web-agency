@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Button from '../Button/Button';
 import data from '../../assets/data/services.json';
 
 import {
@@ -8,12 +9,11 @@ import {
   ServicesWrap,
   ContentWrap,
   ButtonList,
-  Button,
+  Btn,
   ContentTitle,
   ContentList,
   ContentListItem,
   ContentDescription,
-  ButtonWant,
 } from './Services.styled';
 
 const Services = () => {
@@ -32,13 +32,13 @@ const Services = () => {
         <ButtonList>
           {data.map(({ title, id }) => (
             <li key={id}>
-              <Button
+              <Btn
                 type="button"
                 onClick={() => handleButtonClick(id)}
                 className={currentData.id === id ? 'current' : ''}
               >
                 {title}
-              </Button>
+              </Btn>
             </li>
           ))}
         </ButtonList>
@@ -50,13 +50,7 @@ const Services = () => {
             ))}
           </ContentList>
           <ContentDescription>{currentData.description}</ContentDescription>
-          <ButtonWant>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            I want
-          </ButtonWant>
+          <Button text={'I want'} />
         </ContentWrap>
       </ServicesWrap>
     </Section>
