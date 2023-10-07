@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ListItem, ItemTitle, Description, Button } from './Card.styled';
+import { ListItem, Wrap, ItemTitle, Description, Button } from './Card.styled';
 
 const Card = ({ el }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,8 +36,10 @@ const Card = ({ el }) => {
         isVisible ? 'animate__animated animate__fadeInLeft visible' : ''
       }
     >
-      <ItemTitle>{el.title}</ItemTitle>
-      <Description>{el.description}</Description>
+      <Wrap>
+        <ItemTitle>{el.title}</ItemTitle>
+        <Description>{el.description}</Description>
+      </Wrap>
       <Button className="learn-more">
         <span className="circle" aria-hidden="true">
           <span className="icon arrow"></span>

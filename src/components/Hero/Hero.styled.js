@@ -9,7 +9,7 @@ export const Section = styled.section`
   justify-content: space-evenly;
 
   padding: 40px;
-  min-height: 400px;
+  min-height: 100vh;
 
   background-image: linear-gradient(
       to right,
@@ -29,10 +29,19 @@ export const Title = styled.h1`
   & span {
     font-weight: 700;
   }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const OrderBtn = styled.a`
   font-size: 20px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 40px;
+  }
 
   --body-color: #393937;
   --accent-color: #03e9f4;

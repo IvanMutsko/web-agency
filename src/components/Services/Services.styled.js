@@ -4,7 +4,7 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   padding: 40px;
   background-color: #c5c5c5;
 `;
@@ -14,13 +14,25 @@ export const Title = styled.h2`
   text-align: center;
 
   font-size: 28px;
+  font-weight: 700;
   color: #000;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const ServicesWrap = styled.div`
   background-color: #fff;
   border-radius: 10px;
   color: #000;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 28px;
+
+    width: 900px;
+  }
 `;
 
 export const ButtonList = styled.ul`
@@ -28,7 +40,7 @@ export const ButtonList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   padding: 20px;
   margin: 0;
   border-top-left-radius: 10px;
@@ -62,21 +74,24 @@ export const ContentWrap = styled.div`
   font-size: 18px;
 
   padding: 20px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 24px;
+  }
 `;
 
 export const ContentTitle = styled.h3`
-  margin: 0;
   font-weight: 700;
 `;
 
 export const ContentList = styled.ul`
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 `;
 
 export const ContentListItem = styled.li`
   font-weight: 700;
 `;
 
-export const ContentDescription = styled.p`
-  margin: 0;
-`;
+export const ContentDescription = styled.p``;

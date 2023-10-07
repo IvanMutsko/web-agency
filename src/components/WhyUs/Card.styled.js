@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import 'animate.css';
 
 export const ListItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   opacity: 0;
   padding: 30px;
   background-color: #000;
@@ -23,9 +27,11 @@ export const ItemTitle = styled.h2`
   border-bottom: 1px solid #fff;
 `;
 
-export const Description = styled.p`
-  margin: 0 0 25px 0;
+export const Wrap = styled.div`
+  margin-bottom: 20px;
 `;
+
+export const Description = styled.p``;
 
 export const Button = styled.button`
   width: 12rem;
