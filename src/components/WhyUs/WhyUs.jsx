@@ -2,23 +2,21 @@ import React from 'react';
 
 import data from '../../assets/data/whyus.json';
 
+import Card from './Card';
+
+import { Section, Title, List } from './WhyUs.styled';
+
 const WhyUs = () => {
   return (
-    <section>
-      <h2>Why Us</h2>
-      <ul>
+    <Section>
+      <Title>Why Us</Title>
+      <List>
         {data.map(el => (
-          <li key={el.id}>
-            <h3>{el.title}</h3>
-            <p>{el.description}</p>
-          </li>
+          <Card key={el.id} el={el} />
         ))}
-      </ul>
-    </section>
+      </List>
+    </Section>
   );
 };
 
 export default WhyUs;
-
-// 6 ячейок з текстом переваг та 1 анімованим елементом в кожній ячейці
-// Кнопка: Замовити із анімованим елементом/анімацією

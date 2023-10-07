@@ -16,7 +16,6 @@ export const LogoImage = styled.img`
 
 export const BurgerBtn = styled.button`
   display: none;
-  @media (max-width: 1023px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +36,6 @@ export const BurgerBtn = styled.button`
     }
 
     z-index: 4;
-  }
 `;
 
 export const Overlay = styled.div`
@@ -53,7 +51,6 @@ export const Overlay = styled.div`
 `;
 
 export const BurgerMenu = styled.div`
-  @media (max-width: 1023px) {
     display: none;
 
     &.open {
@@ -66,5 +63,4 @@ export const BurgerMenu = styled.div`
     left: 0;
 
     z-index: 3;
-  }
 `;
