@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Do we need to sign a contract before starting work?",
+    "answer": "Yes, after discussing the work plan, we sign a contract together using a digital signature.",
+    "description": "The contract regulates the entire work process, payments, unforeseen circumstances, and other important parts of the project. This document protects both the client and the performer."
+  },
+  {
+    "id": 2,
+    "question": "How is the payment made?",
+    "answer": "There are two payment options: full upfront payment and stage-by-stage payment.",
+    "description": "Full upfront payment involves transferring the entire project amount at the beginning of our cooperation. Stage-by-stage payment involves paying in installments for each stage (or several stages). An invoice (receipt) with information about the paid service or stage is attached to each payment transaction."
+  },
+  {
+    "id": 3,
+    "question": "Can we get a refund after making a payment?",
+    "answer": "Yes, it is possible.",
+    "description": "In any case, 5% and a bank commission are withheld from the refund amount. Refunds are made only for the project stages that have not been started. All work that has been completed and paid for is delivered to the client. Stages that have been initiated are always completed (if desired by the client)."
+  },
+  {
+    "id": 4,
+    "question": "Can you work on an existing website?",
+    "answer": "No, we only create websites from scratch.",
+    "description": "An existing website can be used as an example for design, content, and other aspects, but this does not reduce the cost of the service."
+  },
+  {
+    "id": 5,
+    "question": "Can we choose only one stage, rather than the entire service?",
+    "answer": "No, it is only possible to order a full-service package.",
+    "description": "In some cases, with the client's consent and prior discussion, it is possible to exclude 1-2 stages from the service. The cost of a project with fewer work stages is reduced."
+  }
+]
