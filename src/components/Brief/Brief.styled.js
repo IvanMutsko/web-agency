@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   padding: 40px;
   background-color: #242424;
@@ -26,6 +27,10 @@ export const Table = styled.table`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1024px) {
+    width: 900px;
+  }
 
   & thead {
     font-size: 24px;
@@ -71,6 +76,7 @@ export const Button = styled.button`
   width: 250px;
   padding: 10px 20px;
   margin-left: auto;
+  margin-right: auto;
   border-radius: 5px;
   border: 1px solid #fff;
   background-color: transparent;

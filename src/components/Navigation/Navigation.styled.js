@@ -7,12 +7,16 @@ export const NavList = styled.ul`
   list-style: none;
   gap: 30px;
   padding: 100px 30px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 150px 400px;
+  }
 `;
 
 export const NavItem = styled.li``;
 
 export const NavigateLink = styled(Link)`
-  display: block;
+  display: inline-block;
   color: #fff;
   border: none;
   font-size: 24px;
@@ -22,10 +26,11 @@ export const NavigateLink = styled(Link)`
   padding: 5px 20px;
   text-decoration: none;
 
-  transition: transform 400ms ease;
+  transition: all 300ms ease-in;
 
   &:hover,
   &:focus {
-    transform: scale(0.9);
+    transform: scale(1.25);
+    color: #03e9f4;
   }
 `;

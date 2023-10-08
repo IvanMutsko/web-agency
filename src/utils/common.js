@@ -1,5 +1,12 @@
 import { CONTACT_TYPE } from './constants';
 
+ export const scrollToSection = id => {
+   const element = document.getElementById(id);
+   if (element) {
+     element.scrollIntoView({ behavior: 'smooth' });
+   }
+ };
+
 export const typeInput = type => {
   if (type === CONTACT_TYPE.TELEPHONE) {
     return 'tel';

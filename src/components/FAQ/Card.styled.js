@@ -22,10 +22,21 @@ export const ListItem = styled.li`
 `;
 
 export const ItemTitle = styled.h2`
+  position: relative;
   margin: 0 0 20px 0;
   padding-bottom: 5px;
   text-align: center;
   border-bottom: 1px solid #fff;
+
+  & span {
+    position: absolute;
+    left: 0;
+    bottom: -2.3em;
+    color: #c5c5c5;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
 `;
 
 export const Wrap = styled.div`
@@ -36,14 +47,17 @@ export const Wrap = styled.div`
 
 export const SubWrap = styled.div`
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  height: 0;
+  transition: all 500ms ease-in-out;
 
   &.show {
     opacity: 1;
+    height: 200px;
   }
 `;
 
 export const Text = styled.p`
+  font-size: 18px;
   &.answer {
     font-weight: 500;
   }

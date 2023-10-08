@@ -1,13 +1,22 @@
 import styled from 'styled-components';
 
-export const Section = styled.div`
+export const Section = styled.header`
+  border-bottom: 1px solid #ffffff42;
+`;
+
+export const Wrap = styled.div`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ffffff42;
 
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px 60px;
+
+  @media screen and (min-width: 1024px) {
+    width: 1024px;
+  }
 `;
 
 export const LogoImage = styled.img`
@@ -16,26 +25,26 @@ export const LogoImage = styled.img`
 
 export const BurgerBtn = styled.button`
   display: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background-color: #ffffff42;
-    color: #ffffff99;
-    border: none;
-    border-radius: 30%;
-    height: 50px;
-    width: 50px;
-    font-size: 40px;
-    cursor: pointer;
+  background-color: #ffffff42;
+  color: #ffffff99;
+  border: none;
+  border-radius: 30%;
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
+  cursor: pointer;
 
-    transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
 
-    &:hover {
-      background-color: #ffffff89;
-    }
+  &:hover {
+    background-color: #ffffff89;
+  }
 
-    z-index: 4;
+  z-index: 4;
 `;
 
 export const Overlay = styled.div`
@@ -51,16 +60,16 @@ export const Overlay = styled.div`
 `;
 
 export const BurgerMenu = styled.div`
-    display: none;
+  display: none;
 
-    &.open {
-      display: block;
-    }
+  &.open {
+    display: block;
+  }
 
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
 
-    z-index: 3;
+  z-index: 3;
 `;

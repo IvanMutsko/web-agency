@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { HiMenu } from 'react-icons/hi';
+import { AiOutlineClose } from 'react-icons/ai';
 
 import Navigation from '../Navigation/Navigation';
 import logo from '../../assets/logo.png';
 
 import {
   Section,
+  Wrap,
   LogoImage,
   BurgerMenu,
   BurgerBtn,
@@ -17,6 +19,10 @@ const Header = () => {
 
   const handleBurgerClick = () => {
     setIsBurgerOpen(!isBurgerOpen);
+  };
+
+  const closeMenu = () => {
+    setIsBurgerOpen(false);
   };
 
   useEffect(() => {
@@ -37,17 +43,19 @@ const Header = () => {
 
   return (
     <Section>
-      <LogoImage src={logo} />
+      <Wrap>
+        <LogoImage src={logo} />
 
-      <BurgerBtn onClick={handleBurgerClick}>
-        <HiMenu />
-      </BurgerBtn>
+        <BurgerBtn onClick={handleBurgerClick}>
+          {!isBurgerOpen ? <HiMenu /> : <AiOutlineClose />}
+        </BurgerBtn>
 
-      <BurgerMenu className={isBurgerOpen ? 'open' : ''}>
-        <Overlay>
-          <Navigation closeMenu={handleBurgerClick} />
-        </Overlay>
-      </BurgerMenu>
+        <BurgerMenu className={isBurgerOpen ? 'open' : ''}>
+          <Overlay onClick={closeMenu}>
+            <Navigation closeMenu={handleBurgerClick} />
+          </Overlay>
+        </BurgerMenu>
+      </Wrap>
     </Section>
   );
 };

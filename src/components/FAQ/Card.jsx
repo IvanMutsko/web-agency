@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars-2';
+
 import { ListItem, Wrap, ItemTitle, SubWrap, Text } from './Card.styled';
 
 const Card = ({ el }) => {
@@ -38,6 +40,15 @@ const Card = ({ el }) => {
     setIsShowAnswer(false);
   };
 
+  const renderThumb = () => {
+    const thumbStyle = {
+      backgroundColor: `#ffffff80`,
+      width: '1px',
+      marginLeft: 'auto',
+    };
+    return <div style={{ ...thumbStyle }} />;
+  };
+
   return (
     <ListItem
       ref={cardRef}
@@ -46,13 +57,20 @@ const Card = ({ el }) => {
       }
     >
       <Wrap onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <ItemTitle>{el.question}</ItemTitle>
+        <ItemTitle>
+          {el.question}
+          <span>Hover this</span>
+        </ItemTitle>
         <SubWrap className={isShowAnswer ? 'show' : ''}>
           {isShowAnswer && (
-            <>
+            <Scrollbars
+              autoHeight
+              autoHeightMin={'100'}
+              renderThumbVertical={renderThumb}
+            >
               <Text className="answer">{el.answer}</Text>
               <Text>{el.description}</Text>
-            </>
+            </Scrollbars>
           )}
         </SubWrap>
       </Wrap>

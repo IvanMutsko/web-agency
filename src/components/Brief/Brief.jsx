@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, Title, Table, Button } from './Breif.styled';
+import { Section, Title, Table, Button } from './Brief.styled';
 
 const Brief = () => {
   return (

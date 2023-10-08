@@ -27,7 +27,7 @@ export const List = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin: 0;
+  margin-bottom: 30px;
   list-style: none;
 
   @media screen and (min-width: 1024px) {

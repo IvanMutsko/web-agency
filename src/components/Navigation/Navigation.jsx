@@ -1,15 +1,10 @@
 import React from 'react';
 
+import { scrollToSection } from '../../utils/common';
+
 import { NavList, NavItem, NavigateLink } from './Navigation.styled';
 
 const Navigation = ({ closeMenu }) => {
-  const scrollToSection = id => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <nav>
       <NavList>
@@ -43,7 +38,7 @@ const Navigation = ({ closeMenu }) => {
               closeMenu();
             }}
           >
-            ContactUs
+            Contacts
           </NavigateLink>
         </NavItem>
       </NavList>

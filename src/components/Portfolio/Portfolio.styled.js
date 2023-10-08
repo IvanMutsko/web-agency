@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   padding: 40px;
   background-color: #242424;
@@ -20,11 +21,18 @@ export const Title = styled.h2`
   }
 `;
 
+export const Wrap = styled.div`
+  width: 400px;
+  @media screen and (min-width: 1024px) {
+    width: 900px;
+  }
+`;
+
 export const Image = styled.img`
   width: 360px;
 
   @media screen and (min-width: 768px) {
-    width: 600px;
+    width: 500px;
   }
 
   @media screen and (min-width: 1024px) {
