@@ -2,6 +2,7 @@
   "name": "web-agency",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://IvanMutsko.github.io/web-agency/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
