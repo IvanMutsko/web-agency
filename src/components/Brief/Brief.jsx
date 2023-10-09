@@ -58,7 +58,13 @@ const Brief = () => {
           </tr>
         </tbody>
       </Table>
-      <Button type="button">Fill in now</Button>
+      <Button
+        href="https://forms.gle/DXL5hH4VnqdRFXuj9"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Fill in now
+      </Button>
     </Section>
   );
 };

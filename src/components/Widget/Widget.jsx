@@ -5,6 +5,8 @@ import { scrollToSection } from '../../utils/common';
 
 import { ButtonWrap, ButtonPopUp, PopupContent } from './Widget.styled.js';
 
+import logo from '../../assets/logo.png';
+
 const Widget = () => {
   return (
     <Popup
@@ -30,7 +32,7 @@ const Widget = () => {
           consultation. We will help you solve any issues related to website
           development or online marketing.
         </p>
-        <p className="rocket">🚀</p>
+        <img src={logo} alt="logo" />
       </PopupContent>
     </Popup>
   );

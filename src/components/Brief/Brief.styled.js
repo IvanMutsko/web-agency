@@ -72,7 +72,7 @@ export const Table = styled.table`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   width: 250px;
   padding: 10px 20px;
   margin-left: auto;
@@ -80,6 +80,8 @@ export const Button = styled.button`
   border-radius: 5px;
   border: 1px solid #fff;
   background-color: transparent;
+  text-align: center;
+  text-decoration: none;
 
   color: #fff;
   font-weight: 700;

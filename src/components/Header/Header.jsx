@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HiMenu } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -44,7 +45,9 @@ const Header = () => {
   return (
     <Section>
       <Wrap>
-        <LogoImage src={logo} />
+        <Link to="/">
+          <LogoImage src={logo} />
+        </Link>
 
         <BurgerBtn onClick={handleBurgerClick}>
           {!isBurgerOpen ? <HiMenu /> : <AiOutlineClose />}

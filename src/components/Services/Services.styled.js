@@ -59,6 +59,7 @@ export const Btn = styled.button`
 
   &.current {
     background-color: #387180;
+    color: #03e9f4;
   }
 
   &:hover {

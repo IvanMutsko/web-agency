@@ -1,37 +1,35 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Scrollbars } from 'react-custom-scrollbars-2';
+import { lazy, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Triangle } from 'react-loader-spinner';
 
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import WhyUs from './components/WhyUs/WhyUs';
-import Services from './components/Services/Services';
-import Portfolio from './components/Portfolio/Portfolio';
-import ContactUs from './components/ContactUs/ContactUs';
-import Brief from './components/Brief/Brief';
-import FAQ from './components/FAQ/FAQ';
-import Footer from './components/Footer/Footer';
-import Widget from './components/Widget/Widget';
+const Layout = lazy(() => import('./components/Layout/Layout'));
 
-import { Main } from './App.styled';
+const loaderWrapStyle = {
+  backgroundColor: '#242424',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh',
+};
 
 function App() {
   return (
-    <Router>
-      <Main>
-        <Scrollbars autoHeight autoHeightMin={'100vh'}>
-          <Header />
-          <Hero />
-          <WhyUs />
-          <Services />
-          <Portfolio />
-          <ContactUs />
-          <Brief />
-          <FAQ />
-          <Footer />
-          <Widget />
-        </Scrollbars>
-      </Main>
-    </Router>
+    <Suspense
+      fallback={
+        <Triangle
+          height="150"
+          width="150"
+          color="#03e9f4"
+          ariaLabel="triangle-loading"
+          wrapperStyle={loaderWrapStyle}
+          visible={true}
+        />
+      }
+    >
+      <Routes>
+        <Route path="/" element={<Layout />} />
+      </Routes>
+    </Suspense>
   );
 }
 

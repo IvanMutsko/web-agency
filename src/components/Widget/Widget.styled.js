@@ -18,16 +18,14 @@ export const PopupContent = styled.div`
 
   & img {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
   }
 
-  & p:first-of-type {
+  & p {
     letter-spacing: 3px;
     font-weight: 300;
-    margin-bottom: 20px;
-  }
-
-  & .rocket {
-    font-size: 150px;
   }
 `;
 
