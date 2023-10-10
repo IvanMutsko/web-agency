@@ -1,18 +1,24 @@
 {
   "files": {
-    "main.css": "/web-agency/static/css/main.05c3d611.css",
-    "main.js": "/web-agency/static/js/main.0b04b0a4.js",
+    "main.css": "/web-agency/static/css/main.24d05adc.css",
+    "main.js": "/web-agency/static/js/main.1aa3dc2b.js",
+    "static/js/303.0f399d13.chunk.js": "/web-agency/static/js/303.0f399d13.chunk.js",
+    "static/css/73.d58e59d8.chunk.css": "/web-agency/static/css/73.d58e59d8.chunk.css",
+    "static/js/73.104ccf8b.chunk.js": "/web-agency/static/js/73.104ccf8b.chunk.js",
     "static/media/background.jpg": "/web-agency/static/media/background.d2a181485461208dc5b8.jpg",
     "static/media/iren.jpg": "/web-agency/static/media/iren.495cbd41213709ef860a.jpg",
     "static/media/learn.jpg": "/web-agency/static/media/learn.ef28f43985f81f561d6f.jpg",
     "static/media/volstiny.jpg": "/web-agency/static/media/volstiny.2a2787855fc61fce1625.jpg",
     "static/media/logo.png": "/web-agency/static/media/logo.6328696c9eac305aeaef.png",
     "index.html": "/web-agency/index.html",
-    "main.05c3d611.css.map": "/web-agency/static/css/main.05c3d611.css.map",
-    "main.0b04b0a4.js.map": "/web-agency/static/js/main.0b04b0a4.js.map"
+    "main.24d05adc.css.map": "/web-agency/static/css/main.24d05adc.css.map",
+    "main.1aa3dc2b.js.map": "/web-agency/static/js/main.1aa3dc2b.js.map",
+    "303.0f399d13.chunk.js.map": "/web-agency/static/js/303.0f399d13.chunk.js.map",
+    "73.d58e59d8.chunk.css.map": "/web-agency/static/css/73.d58e59d8.chunk.css.map",
+    "73.104ccf8b.chunk.js.map": "/web-agency/static/js/73.104ccf8b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05c3d611.css",
-    "static/js/main.0b04b0a4.js"
+    "static/css/main.24d05adc.css",
+    "static/js/main.1aa3dc2b.js"
   ]
 }
