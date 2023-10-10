@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 
+export const WrapForScroll = styled.div`
+  padding: 20px;
+`;
+
 export const InputWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
 
   border: 1px solid #fff;
-  padding: 30px;
+  padding: 10px;
 `;
 
 export const Title = styled.h4`
   font-size: 20px;
+  margin-bottom: 20px;
 `;
 
 export const Form = styled.form`

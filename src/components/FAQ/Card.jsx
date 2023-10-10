@@ -1,7 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
-import { ListItem, Wrap, ItemTitle, SubWrap, Text } from './Card.styled';
+import {
+  WrapForScroll,
+  ListItem,
+  Wrap,
+  ItemTitle,
+  SubWrap,
+  Text,
+} from './Card.styled';
 
 const Card = ({ el }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,8 +50,7 @@ const Card = ({ el }) => {
   const renderThumb = () => {
     const thumbStyle = {
       backgroundColor: `#ffffff80`,
-      width: '1px',
-      marginLeft: 'auto',
+      borderRadius: '5px',
     };
     return <div style={{ ...thumbStyle }} />;
   };
@@ -65,11 +71,13 @@ const Card = ({ el }) => {
           {isShowAnswer && (
             <Scrollbars
               autoHeight
-              autoHeightMin={'100'}
+              autoHeightMin={'100px'}
               renderThumbVertical={renderThumb}
             >
-              <Text className="answer">{el.answer}</Text>
-              <Text>{el.description}</Text>
+              <WrapForScroll>
+                <Text className="answer">{el.answer}</Text>
+                <Text>{el.description}</Text>
+              </WrapForScroll>
             </Scrollbars>
           )}
         </SubWrap>

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import 'animate.css';
 
+export const WrapForScroll = styled.div`
+  padding: 20px;
+`;
+
 export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
@@ -59,6 +63,8 @@ export const SubWrap = styled.div`
 export const Text = styled.p`
   font-size: 18px;
   &.answer {
+    font-size: 22px;
     font-weight: 500;
+    margin-bottom: 20px;
   }
 `;

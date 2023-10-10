@@ -36,7 +36,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const OrderBtn = styled.a`
+export const OrderBtn = styled.button`
   font-size: 20px;
 
   @media screen and (min-width: 1024px) {
@@ -51,14 +51,14 @@ export const OrderBtn = styled.a`
     0 0 30px #3c7a89;
 
   position: relative;
-  display: inline-block;
   padding: 20px 30px;
   color: var(--accent-color);
   text-transform: uppercase;
   overflow: hidden;
   letter-spacing: 4px;
   transition: 0.5s;
-  text-decoration: none;
+  background-color: transparent;
+  border: none;
 
   & span {
     position: absolute;

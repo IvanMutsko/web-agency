@@ -24,7 +24,6 @@ export const LogoImage = styled.img`
 `;
 
 export const BurgerBtn = styled.button`
-  display: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,10 +37,11 @@ export const BurgerBtn = styled.button`
   font-size: 40px;
   cursor: pointer;
 
-  transition: background-color 250ms linear;
+  transition: all 300ms ease-in;
 
   &:hover {
     background-color: #ffffff89;
+    color: #03e9f4;
   }
 
   z-index: 4;
